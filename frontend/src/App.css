@@ -1,0 +1,27 @@
+.heroTitle {
+  margin-top: 50px;
+  font-family: Sans-Serif;
+  text-align: center;
+  color: white;
+}
+
+.heroText {
+    font-family: Sans-Serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: white;
+}
+
+body {
+  background: #1e3c72;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.cardStyling {
+  padding: 50px;
+  height: 18rem !important;
+}
+
