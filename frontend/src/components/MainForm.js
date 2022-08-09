@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 class MainForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: '' };
+        this.state = { value: '', result: '' };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -30,8 +30,11 @@ class MainForm extends React.Component {
 
         console.log(data);
 
-        this.setState({ value: data.result });
-
+        if (data.status === 400) {
+            this.setState({ result: 'Digite um número válido.'})
+        } else {
+            this.setState({ result: 'O resultado é '+data.result });
+        }
     }
 
     render() {
@@ -41,12 +44,16 @@ class MainForm extends React.Component {
                     <Form.Label>Número</Form.Label>
                     <Form.Control onChange={this.handleChange} name="numInput" value={this.state.value} type="number" step="1" placeholder="Exemplo: 5" />
                     <Form.Text className="text-muted">
-                        Digite um número inteiro.
+                        Digite um número inteiro positivo maior que 1.
                     </Form.Text>
                 </Form.Group>
                 <Button variant="primary" type="submit" style={{ "width": "100%" }}>
                     Calcular
                 </Button>
+                {this.state.result !== '' && 
+                    <div className='finalResult'>
+                    {this.state.result}
+                    </div>}
             </Form>
         );
     }

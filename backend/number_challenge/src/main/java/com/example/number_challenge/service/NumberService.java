@@ -61,9 +61,7 @@ public class NumberService {
             }
 
         }
-        System.out.println("lista"+primeFactors);
-        System.out.println("numero"+n);
-        System.out.println("divisores"+result);
+
         return result;
     }
 }

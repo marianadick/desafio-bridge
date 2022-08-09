@@ -25,3 +25,10 @@ body {
   height: 18rem !important;
 }
 
+.finalResult {
+  font-family: Sans-Serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
