@@ -16,14 +16,14 @@ A implementação do frontend foi realizada através do framework React e a esti
 ##  Como executar
 
 ### Configurando o banco de dados
--> Rodar postgres no localhost na porta 5432;
--> Criar um db chamado "numberdb";
--> Criar um schema "numberschema";
--> Criar uma tabela "number" no schema criado;
+1. Rodar postgres no localhost na porta 5432;
+2. Criar um db chamado "numberdb";
+3. Criar um schema "numberschema";
+4. Criar uma tabela "number" no schema criado;
 
 ou
 
--> Rodar o seguinte script:
+Rodar o seguinte script:
 ```
 CREATE DATABASE numberdb;
 CREATE SCHEMA numberschema;
@@ -39,12 +39,12 @@ k int not NULL,
 ```
 
 ### Backend
--> Acessar a pasta raíz do projeto "number_challenge":
--> Realizar o maven install das dependências;
--> Realizar o build da aplicação na IDE de sua escolha.
+1. Acessar a pasta raíz do projeto "number_challenge":
+2. Realizar o maven install das dependências;
+3. Realizar o build da aplicação na IDE de sua escolha.
 
 ### Frontend
--> Instalar requirements;
--> Acessar a pasta "frontend";
--> Utilizar o comando "npm start" no terminal;
--> Acessar na web http://localhost/3000;
+1. Instalar requirements;
+2. Acessar a pasta "frontend";
+3. Utilizar o comando "npm start" no terminal;
+4. Acessar na web http://localhost/3000;
