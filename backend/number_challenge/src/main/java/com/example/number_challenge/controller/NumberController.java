@@ -26,7 +26,6 @@ public class NumberController {
         System.out.println(input.getK());
         NumberDTO result = numService.calculateFinalResult(input);
         long elapsedTime = System.nanoTime() - startTime;
-        elapsedTime /= 1000000000;
         result.setTime(elapsedTime);
         var numberModel = new Number();
         result.setK(input.getK());

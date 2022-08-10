@@ -16,6 +16,7 @@ public class Number implements Serializable {
     private int id;
 
     @NotNull
+    @Min(2)
     private int k;
     private int result;
     private long time;
