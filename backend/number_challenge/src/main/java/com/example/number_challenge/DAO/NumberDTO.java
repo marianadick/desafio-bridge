@@ -1,21 +1,11 @@
-package com.example.number_challenge.model;
+package com.example.number_challenge.DAO;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
-import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
-import java.util.UUID;
 
-@Entity
-public class Number implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
+public class NumberDTO {
     @NotNull
+    @Min(2)
     private int k;
     private int result;
     private long time;

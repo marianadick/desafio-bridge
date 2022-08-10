@@ -2,9 +2,13 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 
 class HistoryTable extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <Table striped bordered condensed hover>
+            <Table responsive>
                 <thead>
                     <tr>
                         <th>Número</th>
@@ -13,11 +17,10 @@ class HistoryTable extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>8 s</td>
-                    </tr>
+                    {this.props.history.map(i => (
+                        <tr><td>{i.k}</td><td>{i.result}</td><td>{i.time}</td></tr>
+                    )
+                    )}
                 </tbody>
             </Table>
         );

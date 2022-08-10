@@ -1,12 +1,10 @@
 import './App.css';
 import MainForm from './components/MainForm';
-import HistoryTable from './components/HistoryTable';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 
 function App() {
+
   return (
     <Container className='containerBackground'>
       <Row>
@@ -17,16 +15,7 @@ function App() {
         </header>
       </Row>
       <Row>
-        <Col>
-          <Card className='cardStyling'>
-            <MainForm />
-          </Card>
-        </Col>
-        <Col>
-          <Card className='cardStyling'>
-            <HistoryTable />
-          </Card>
-        </Col>
+        <MainForm />
       </Row>
     </Container>
 

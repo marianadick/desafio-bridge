@@ -1,13 +1,28 @@
 package com.example.number_challenge.service;
 
+import com.example.number_challenge.DAO.NumberDTO;
+import com.example.number_challenge.repository.NumberRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
+import java.util.List;
+
 import com.example.number_challenge.model.Number;
+
+import javax.validation.Valid;
 
 @Service
 public class NumberService {
-    public Number calculateFinalResult(Number number) {
+
+    final
+    NumberRepository numberRepository;
+
+    public NumberService(NumberRepository numberRepository) {
+        this.numberRepository = numberRepository;
+    }
+
+    public NumberDTO calculateFinalResult(@Valid NumberDTO number) {
         int count = 0;
         for (int i = 2; i < number.getK(); i++) {
             if (calculateDivisors(i) == calculateDivisors((i+1))) {
@@ -63,5 +78,13 @@ public class NumberService {
         }
 
         return result;
+    }
+
+    public void saveNumber(Number number) {
+        numberRepository.save(number);
+    }
+
+    public List<Number> getResult() {
+        return numberRepository.findAll();
     }
 }
